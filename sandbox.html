@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Sandbox for projects</title>
+    <link rel="stylesheet" href="/sandboxstyle.css">
+    <style>  
+    </style>
+</head>
+    <body class="bkg">
+        <div>
+            <div>
+                <h1 id="">Press Play</h1>
+            </div>
+        <svg width="120" height="100" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 48.5%;">
+            <g id="triangle" href="https://open.spotify.com/album/64QgEWMFxUJJuUDcd11afM?si=R0FZLJMeTV25vDFGwUjNeg">
+                <g id="darkGroup">
+                    <path  
+                    id="dark1" 
+                    opacity="0.8" 
+                    d="M58 48.7679C59.3333 49.5377 59.3333 51.4623 58 52.2321L24.25 71.7176C22.9167 72.4874 21.25 71.5252 21.25 69.9856V31.0144C21.25 29.4748 22.9167 28.5126 24.25 29.2824L58 48.7679Z"
+                    />
+        
+                    <path 
+                    id="dark2" 
+                    opacity="0.8" 
+                    d="M44 48.7679C45.3333 49.5377 45.3333 51.4623 44 52.2321L10.25 71.7176C8.91667 72.4874 7.25 71.5252 7.25 69.9856V31.0144C7.25 29.4748 8.91667 28.5126 10.25 29.2824L44 48.7679Z"
+                    />
+
+                </g>
+                <g id="lightGroup">
+                    <path 
+                    id="light1" 
+                    opacity="0.8" 
+                    d="M44 48.7679C45.3333 49.5377 45.3333 51.4623 44 52.2321L10.25 71.7176C8.91667 72.4874 7.25 71.5252 7.25 69.9856V31.0144C7.25 29.4748 8.91667 28.5126 10.25 29.2824L44 48.7679Z"
+                    />
+                </g>
+            </g>
+        </svg>
+        </div>
+        <script>
+            const svg = document.getElementById('triangles');
+
+            function openTab() {
+            window.open("https://open.spotify.com/album/64QgEWMFxUJJuUDcd11afM?si=R0FZLJMeTV25vDFGwUjNeg", "blank");
+
+            }
+            svg.onclick = (e) => {
+                const colors = ['red', 'blue', 'green', 'orange', 'pink', 'purple'];
+                const rando = () => colors[Math.floor(Math.random() * colors.length)];
+                document.documentElement.style.cssText = `
+                --dark-color: ${rando()};
+                `
+            }
+        </script>
+    </body>
+</html>

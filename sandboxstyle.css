@@ -1,0 +1,56 @@
+:root {
+    --dark-color: #33847A;
+    --light-color: #A0FFEE;
+    --dark-bkg: #111111;
+    --off-white: #fbf3e1;
+    --spotify-green: #1ed760;
+}
+
+@font-face {
+    font-family: GothamBook;
+    src: url(/GothamBook.woff);
+}
+
+svg {
+    cursor: pointer;
+}
+
+#darkGroup {
+    fill: var(--dark-color)
+}
+
+#lightGroup {
+    fill: var(--light-color)
+}
+
+h1 {
+    color: var(--spotify-green);
+    font-family: GothamBook;
+    text-align: center;
+}
+
+#spotifyMove {
+    margin-left: 32.5%;
+}
+
+#dark1,
+#light1,
+#dark2 {
+    transition: all 1s ease;
+}
+#dark2 {
+    transform: translateX(-100%);
+}
+svg:hover #light1 {
+    transform: translateX(12.5%);
+}
+svg:hover #dark1 {
+    transform: translateX(40%);
+    opacity: 0;
+}
+svg:hover #dark2 {
+    transform: translateX(0%);
+}
+.bkg {
+    background-color: var(--dark-bkg);
+}
